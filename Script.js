@@ -15,6 +15,35 @@ lives.innerHTML = MaxWrongchoices;
 for (let index = 0; index < hiddenWord.length; index++) {
     Answer[index] = " _ ";  
 }
+document.getElementById("reset").addEventListener("click",
+        () => {
+           for (const item of bArray) {
+                item.disabled = false;
+            } 
+            
+            let newrand = Math.floor(Math.random()*wordlist.length);
+            hiddenWord = wordlist[newrand];
+            console.log(hiddenWord);
+            
+            document.getElementById("result").innerHTML = "welcome back";
+        
+            Answer = []; 
+            for (let index = 0; index < hiddenWord.length; index++) {
+                Answer[index] = " _ ";  
+            }
+            ;
+            guessLetters =[];
+            document.getElementById("gLetters").innerHTML = guessLetters;
+            Wrong = 0;
+            Correct = 0;
+            CorrectL = 0;
+            lives.innerHTML = MaxWrongchoices;
+            
+            document.getElementById("answer").innerHTML = Answer;
+        }
+        
+        )
+
 
 document.getElementById("answer").innerHTML = Answer;
 const bArray = Array.from(document.querySelectorAll("button.char"));
@@ -61,31 +90,6 @@ bArray.forEach($btn =>{
             
         }  
         );
-        document.getElementById("reset").addEventListener("click",
-        () => {
-            rand = Math.floor(Math.random()*wordlist.length);
-           
-            console.log(hiddenWord);
-            for (const item of bArray) {
-                item.disabled = false;
-            }
-            document.getElementById("result").innerHTML = "welcome back";
         
-             
-            for (let index = 0; index < hiddenWord.length; index++) {
-                Answer[index] = " _ ";  
-            }
-            ;
-            guessLetters =[];
-            document.getElementById("gLetters").innerHTML = guessLetters;
-            Wrong = 0;
-            Correct = 0;
-            CorrectL = 0;
-            lives.innerHTML = MaxWrongchoices;
-            
-            document.getElementById("answer").innerHTML = Answer;
-        }
-        
-        )
 
 })

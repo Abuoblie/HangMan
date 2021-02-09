@@ -12,3 +12,47 @@
     text-align: center;
     background-color: gray;
 }
+#answer {
+    text-align: center;
+    margin: 1em;
+    font-size: larger;
+    font-family: sans-serif;
+}
+#button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.container p{
+    font-size: larger;
+    font-family: sans-serif;
+}
+main{
+    position: relative;
+    width: 100%;
+    display: flexbox;
+    flex-direction: column;
+}
+#reset{
+   height: 8vh;
+   width: 10%;
+   display: block;
+   margin: 0 auto;
+   margin-top: 2em;
+   background-image: linear-gradient(blue, yellow);
+   color: rgb(10, 245, 147);
+   font-size: 1.2em;
+}
+header {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(blue, yellow);
+}
