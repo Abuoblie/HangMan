@@ -26,7 +26,7 @@ let Answer = [];
 let lives = document.getElementById("lives");
 lives.innerHTML = MaxWrongchoices;
 for (let index = 0; index < hiddenWord.length; index++) {
-    Answer[index] = " _ ";  
+    Answer[index] = (" _ ");  
 }
 document.getElementById("reset").addEventListener("click",
         () => {
@@ -52,7 +52,7 @@ document.getElementById("reset").addEventListener("click",
             CorrectL = 0;
             lives.innerHTML = MaxWrongchoices;
             
-            document.getElementById("answer").innerHTML = Answer;
+            document.getElementById("answer").innerHTML = Answer.join('');
             canvas.i
             canvas.style.backgroundColor ="white";
             context.clearRect(canvas.width/2 -30, yPos-80, 120, 80);
@@ -62,7 +62,7 @@ document.getElementById("reset").addEventListener("click",
  )
 
 
-document.getElementById("answer").innerHTML = Answer;
+document.getElementById("answer").innerHTML = Answer.join(' ');
 const bArray = Array.from(document.querySelectorAll("button.char"));
 bArray.forEach($btn =>{
     $btn.addEventListener(
@@ -70,12 +70,12 @@ bArray.forEach($btn =>{
         ()=>{
             Correct = 0;
             guessLetters.push($btn.textContent.toLowerCase());
-            document.getElementById("gLetters").innerHTML = guessLetters;
+            document.getElementById("gLetters").innerHTML = guessLetters.join(' ');
             $btn.disabled =true;
             for (let index = 0; index < hiddenWord.length; index++) {
                 if(hiddenWord[index] === $btn.textContent.toLowerCase()){
                     Answer[index] = $btn.textContent.toLowerCase();
-                    document.getElementById("answer").innerHTML = Answer;
+                    document.getElementById("answer").innerHTML = Answer.join(' ');
                     Correct += 1;    
                 }     
                    
@@ -139,6 +139,8 @@ bArray.forEach($btn =>{
                 document.getElementById("result").style.color = "white";
                 canvas.style.backgroundColor ="green";
                 context.clearRect(canvas.width/2 -30, yPos-90, 120, 80);
+               
+
             }
             else if (Wrong === MaxWrongchoices) {
                 document.getElementById("result").style.backgroundColor = "red";
