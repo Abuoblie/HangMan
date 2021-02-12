@@ -22,7 +22,7 @@ body {
     color: rgb(215, 233, 215);
     font-size: large;
     font-weight: 600;
-
+    
    
 }
 #answer {
@@ -88,4 +88,5 @@ canvas {
     height: 25vh;
     margin-bottom: 2em;
     background-color: beige;
+    
 }

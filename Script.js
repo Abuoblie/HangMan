@@ -56,6 +56,10 @@ document.getElementById("reset").addEventListener("click",
             canvas.i
             canvas.style.backgroundColor ="white";
             context.clearRect(canvas.width/2 -30, yPos-80, 120, 80);
+            context.beginPath();
+            context.moveTo(canvas.width/2 +30, yPos-90);
+            context.lineTo(canvas.width/2 +30, yPos-80);
+            context.stroke();
             
         }
         
